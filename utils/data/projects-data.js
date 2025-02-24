@@ -2,7 +2,7 @@ export const projectsData = [
     {
         id: 1,
         name: 'Luxury-Services',
-        description: `Symfony est un projet backend conçu pour offrir une solution robuste et évolutive. Il s'agit d'une application permettant aux professionnels de créer et gérer des offres d'emploi. Les candidats peuvent postuler directement depuis la plateforme.
+        description: `Luxury-Services est un projet backend conçu pour offrir une solution robuste et évolutive. Il s'agit d'une application permettant aux professionnels de créer et gérer des offres d'emploi. Les candidats peuvent postuler directement depuis la plateforme.
 
 L'application intègre une interface administrateur pour la gestion des utilisateurs, des offres et des candidatures. Un système de rôles permet de différencier les entreprises, les candidats et les administrateurs. L'expérience utilisateur est optimisée grâce à Twig et une intégration frontend soignée. L'objectif est de garantir une expérience fluide et performante en exploitant toute la puissance de Symfony.`,
         tools: ['Symfony', 'Twig', 'MailTrap',
