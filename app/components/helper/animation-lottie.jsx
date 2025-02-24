@@ -1,8 +1,21 @@
 "use client"
 
-import Lottie from "lottie-react";
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 
-const AnimationLottie = ({ animationPath, width }) => {
+// Import dynamique de Lottie avec SSR désactivé
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false,
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 w-full rounded"></div>
+});
+
+const AnimationLottie = ({ animationPath }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,8 +25,14 @@ const AnimationLottie = ({ animationPath, width }) => {
     }
   };
 
+  if (!isMounted) {
+    return <div className="animate-pulse bg-gray-200 h-64 w-full rounded"></div>;
+  }
+
   return (
-    <Lottie {...defaultOptions} />
+    <div className="w-full h-full">
+      <Lottie {...defaultOptions} />
+    </div>
   );
 };
 
