@@ -43,7 +43,7 @@ function Education() {
           </div>
 
           <div>
-            {/* <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6">
               {
                 educations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
@@ -75,7 +75,7 @@ function Education() {
                   </GlowCard>
                 ))
               }
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
